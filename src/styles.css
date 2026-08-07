@@ -59,6 +59,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-ecg-trace: var(--ecg-trace);
+  --color-ecg-paper: var(--ecg-paper);
+  --color-ecg-grid: var(--ecg-grid);
+  --color-ecg-ink: var(--ecg-ink);
+  --color-case-edge: var(--case-edge);
+  --color-case: var(--case);
+  --color-case-foreground: var(--case-foreground);
 }
 
 :root {
@@ -95,6 +102,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --ecg-paper: oklch(0.965 0.008 95);
+  --ecg-ink: oklch(0.15 0.01 60);
+  --ecg-grid: oklch(0.72 0.01 60);
+  --ecg-trace: oklch(0.55 0.23 27);
+  --case: oklch(0.26 0.012 250);
+  --case-foreground: oklch(0.93 0.01 250);
+  --case-edge: oklch(0.38 0.015 250);
+  --shadow-case: 0 24px 60px -18px oklch(0 0 0 / 0.55);
 }
 
 .dark {
@@ -130,6 +145,13 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --ecg-trace: oklch(0.7 0.3 12.2);
+  --ecg-paper: oklch(0.2 0.01 264.695);
+  --ecg-grid: oklch(0.35 0.008 264.695);
+  --ecg-ink: oklch(0.9 0.05 264.695);
+  --case-edge: oklch(0.3 0.05 264.695);
+  --case: oklch(0.15 0.02 264.695);
+  --case-foreground: oklch(0.85 0.06 264.695);
 }
 
 @layer base {

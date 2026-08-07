@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DragDemoRouteImport } from './routes/drag-demo'
+import { Route as EcgRouteImport } from './routes/ecg'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DragDemoRoute = DragDemoRouteImport.update({
+  id: '/drag-demo',
+  path: '/drag-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EcgRoute = EcgRouteImport.update({
+  id: '/ecg',
+  path: '/ecg',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/drag-demo': typeof DragDemoRoute
+  '/ecg': typeof EcgRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/drag-demo': typeof DragDemoRoute
+  '/ecg': typeof EcgRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/drag-demo': typeof DragDemoRoute
+  '/ecg': typeof EcgRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/drag-demo' | '/ecg'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/drag-demo' | '/ecg'
+  id: '__root__' | '/' | '/drag-demo' | '/ecg'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DragDemoRoute: typeof DragDemoRoute
+  EcgRoute: typeof EcgRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/drag-demo': {
+      id: '/drag-demo'
+      path: '/drag-demo'
+      fullPath: '/drag-demo'
+      preLoaderRoute: typeof DragDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ecg': {
+      id: '/ecg'
+      path: '/ecg'
+      fullPath: '/ecg'
+      preLoaderRoute: typeof EcgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DragDemoRoute: DragDemoRoute,
+  EcgRoute: EcgRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
