@@ -347,7 +347,15 @@ export default function Page() {
 
           <footer className="mt-16 border-t border-border pt-6 text-xs text-muted-foreground">
             <p>
-              Built with ❤️ for component showcases
+              Made with ❤️ by{" "}
+              <a
+                href="https://x.com/Brextherfx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"
+              >
+                BrextherFX
+              </a>
             </p>
           </footer>
         </main>

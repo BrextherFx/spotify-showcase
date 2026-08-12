@@ -4,6 +4,7 @@ import { Github, Terminal } from "lucide-react";
 import Spotify from "@/components/spotify/Spotify";
 import CodeBlock from "@/components/docs/CodeBlock";
 import { LineNav } from "@/components/line-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 import spotifySource from "@/components/spotify/Spotify.tsx?raw";
 import hookSource from "@/hooks/useSpotify.ts?raw";
 import iconSource from "@/components/icons/SpotifyIcon.tsx?raw";
@@ -145,17 +146,23 @@ function DocsPage() {
               <a href="/ecg" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 ECG Machine
               </a>
+              <a href="/receipt-printer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Receipt Printer
+              </a>
             </nav>
           </div>
-          <a
-            href="https://github.com/brextherfx/spotify-showcase"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Github className="size-3.5" />
-            GitHub
-          </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href="https://github.com/brextherfx/spotify-showcase"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+            >
+              <Github className="size-3.5" />
+              GitHub
+            </a>
+          </div>
         </div>
       </header>
 
@@ -359,7 +366,7 @@ function DocsPage() {
             <p>
               Made with ❤️ by{" "}
               <a
-                href="https://github.com/brextherfx"
+                href="https://x.com/Brextherfx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"

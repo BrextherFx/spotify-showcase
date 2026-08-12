@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DragDemoRouteImport } from './routes/drag-demo'
 import { Route as EcgRouteImport } from './routes/ecg'
+import { Route as ReceiptPrinterRouteImport } from './routes/receipt-printer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,44 @@ const EcgRoute = EcgRouteImport.update({
   path: '/ecg',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReceiptPrinterRoute = ReceiptPrinterRouteImport.update({
+  id: '/receipt-printer',
+  path: '/receipt-printer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/drag-demo': typeof DragDemoRoute
   '/ecg': typeof EcgRoute
+  '/receipt-printer': typeof ReceiptPrinterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/drag-demo': typeof DragDemoRoute
   '/ecg': typeof EcgRoute
+  '/receipt-printer': typeof ReceiptPrinterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/drag-demo': typeof DragDemoRoute
   '/ecg': typeof EcgRoute
+  '/receipt-printer': typeof ReceiptPrinterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/drag-demo' | '/ecg'
+  fullPaths: '/' | '/drag-demo' | '/ecg' | '/receipt-printer'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/drag-demo' | '/ecg'
-  id: '__root__' | '/' | '/drag-demo' | '/ecg'
+  to: '/' | '/drag-demo' | '/ecg' | '/receipt-printer'
+  id: '__root__' | '/' | '/drag-demo' | '/ecg' | '/receipt-printer'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DragDemoRoute: typeof DragDemoRoute
   EcgRoute: typeof EcgRoute
+  ReceiptPrinterRoute: typeof ReceiptPrinterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EcgRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/receipt-printer': {
+      id: '/receipt-printer'
+      path: '/receipt-printer'
+      fullPath: '/receipt-printer'
+      preLoaderRoute: typeof ReceiptPrinterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DragDemoRoute: DragDemoRoute,
   EcgRoute: EcgRoute,
+  ReceiptPrinterRoute: ReceiptPrinterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
