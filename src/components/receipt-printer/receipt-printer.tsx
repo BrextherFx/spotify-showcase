@@ -5,12 +5,12 @@ import { Check, Home, Loader2 } from "lucide-react";
 const order = {
   item: "Pro plan",
   detail: "Annual subscription",
-  subtotal: "£192.00",
-  tax: "£38.40",
-  total: "£230.40",
+  subtotal: "$302.00",
+  tax: "$48.40",
+  total: "$350.40",
   id: "ORD-2048",
-  card: "Visa •••• 4242",
-  date: "11 AUG 2026 · 14:32",
+  card: "Visa •••• 3535",
+  date: "12 AUG 2026 · 14:32",
 };
 
 type Status = "idle" | "printing" | "done";
