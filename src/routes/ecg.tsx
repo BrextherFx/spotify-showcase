@@ -7,6 +7,7 @@ import CodeBlock from "@/components/docs/CodeBlock";
 import { LineNav } from "@/components/line-nav";
 import ecgMachineSource from "@/components/ECG/EcgMachine.tsx?raw";
 import ecgWatchfaceSource from "@/components/ECG/EcgWatchface.tsx?raw";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const TITLE = "ECG Machine — Components";
 const DESCRIPTION =
@@ -161,17 +162,23 @@ function EcgDocsPage() {
               <a href="/ecg" className="text-sm font-medium text-foreground hover:text-accent-foreground transition-colors">
                 ECG Machine
               </a>
+              <a href="/receipt-printer" className="text-sm font-medium text-foreground hover:text-accent-foreground transition-colors">
+                Receipt Printer
+              </a>
             </nav>
           </div>
-          <a
-            href="https://github.com/sahilcodexx/MechanicalKeyboard"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Github className="size-3.5" />
-            GitHub
-          </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href="https://github.com/brextherfx/spotify-showcase"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+            >
+              <Github className="size-3.5" />
+              GitHub
+            </a>
+          </div>
         </div>
       </header>
 
