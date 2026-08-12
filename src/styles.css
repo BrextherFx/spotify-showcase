@@ -4,6 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "KeyUI Brand";
+  src: url("/fonts.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
  * Design system definition.
  *
@@ -19,6 +27,7 @@
  */
 
 @theme inline {
+  --font-brand: "KeyUI Brand", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -86,7 +95,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: rgb(48, 45, 46);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -253,17 +262,27 @@
 
 /* Torn / perforated bottom edge of the receipt */
 @utility torn-edge {
-  --tooth: 10px;
+  --tooth: 16px;
   background-color: var(--paper);
   height: calc(var(--tooth) / 2);
+  -webkit-mask-image: conic-gradient(
+    from -45deg at 50% 0,
+    #0000 0deg,
+    #000 1deg 89deg,
+    #0000 90deg
+  );
   mask-image: conic-gradient(
     from -45deg at 50% 0,
     #0000 0deg,
     #000 1deg 89deg,
     #0000 90deg
   );
+  -webkit-mask-size: var(--tooth) 100%;
   mask-size: var(--tooth) 100%;
+  -webkit-mask-repeat: repeat-x;
   mask-repeat: repeat-x;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
 }
 
 @utility accent-interactive {

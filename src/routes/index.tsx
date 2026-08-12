@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Github, Terminal } from "lucide-react";
+import Logo from "@/components/icons/Logo";
 import Spotify from "@/components/spotify/Spotify";
 import CodeBlock from "@/components/docs/CodeBlock";
 import { LineNav } from "@/components/line-nav";
@@ -133,8 +134,10 @@ function DocsPage() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
-              <span className="size-2.5 rounded-full bg-[#1DB954]" />
-              <span className="text-sm font-semibold tracking-tight">components</span>
+              <span className="flex size-6 items-center justify-center rounded-md bg-foreground text-background">
+                <Logo className="size-3.5" />
+              </span>
+              <span className="font-brand text-sm font-semibold tracking-tight">KEY UI</span>
               <span className="ml-2 rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
                 docs
               </span>
@@ -369,7 +372,7 @@ function DocsPage() {
                 href="https://x.com/Brextherfx"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"
+                className="font-brand font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"
               >
                 BrextherFX
               </a>

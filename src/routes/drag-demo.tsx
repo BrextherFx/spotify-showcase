@@ -3,6 +3,7 @@ import { useState } from "react";
 import Spotify from "@/components/spotify/Spotify";
 import SpotifyDraggable from "@/components/spotify/SpotifyDraggable";
 import SpotifyTrail from "@/components/spotify/SpotifyTrail";
+import Logo from "@/components/icons/Logo";
 
 const TITLE = "Drag-to-Open Animation — Spotify Components";
 const DESCRIPTION =
@@ -38,8 +39,10 @@ function DragDemoPage() {
       <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
           <div className="flex items-center gap-2">
-            <span className="size-2.5 rounded-full bg-[#1DB954]" />
-            <span className="text-sm font-semibold tracking-tight">components</span>
+            <span className="flex size-6 items-center justify-center rounded-md bg-foreground text-background">
+              <Logo className="size-3.5" />
+            </span>
+            <span className="font-brand text-sm font-semibold tracking-tight">KEY UI</span>
             <span className="ml-2 rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
               drag interactions
             </span>
