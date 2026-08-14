@@ -152,6 +152,9 @@ function DocsPage() {
               <a href="/receipt-printer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Receipt Printer
               </a>
+              <a href="/postcard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Postcard
+              </a>
             </nav>
           </div>
           <div className="flex items-center gap-2">
@@ -365,18 +368,34 @@ function DocsPage() {
             </div>
           </section>
 
-          <footer className="mt-16 border-t border-border pt-6 text-xs text-muted-foreground">
-            <p>
-              Made with ❤️ by{" "}
+          <footer className="mt-16 border-t border-border pt-6">
+            <div className="flex flex-col gap-4">
+              <p className="text-xs text-muted-foreground">
+                Made with ❤️ by{" "}
+                <a
+                  href="https://x.com/Brextherfx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-brand font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"
+                >
+                  BrextherFX
+                </a>
+              </p>
               <a
-                href="https://x.com/Brextherfx"
+                href="https://www.scrolllaunch.com/products/spotify-now-playing-card?ref=badge"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="font-brand font-medium text-foreground underline underline-offset-2 transition-colors hover:text-accent-foreground"
+                rel="noopener"
+                title="Featured on ScrollLaunch"
               >
-                BrextherFX
+                <img
+                  src="https://www.scrolllaunch.com/api/badge/spotify-now-playing-card"
+                  alt="Featured on ScrollLaunch"
+                  width="220"
+                  height="48"
+                  loading="lazy"
+                />
               </a>
-            </p>
+            </div>
           </footer>
         </main>
 
