@@ -1,0 +1,69 @@
+{
+  "name": "key-ui",
+  "version": "1.0.0",
+  "description": "A library of living, interactive UI components with procedural audio synthesis, physics kinetics, and native MCP server for AI coding agents.",
+  "type": "module",
+  "main": "./mcp-server/index.js",
+  "bin": {
+    "key-ui": "./bin/cli.js",
+    "keyui-mcp": "./mcp-server/index.js"
+  },
+  "files": [
+    "bin",
+    "mcp-server",
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "mcp",
+    "model-context-protocol",
+    "typewriter",
+    "audio",
+    "physics",
+    "canvas",
+    "shadcn",
+    "tailwind"
+  ],
+  "author": "BrextherFx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrextherFx/spotify-showcase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrextherFx/spotify-showcase/issues"
+  },
+  "homepage": "https://github.com/BrextherFx/spotify-showcase#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "mcp": "node mcp-server/index.js",
+    "mcp:sse": "node mcp-server/server-sse.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0",
+    "three": "^0.170.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.170.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}

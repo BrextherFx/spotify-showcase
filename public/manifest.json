@@ -1,0 +1,16 @@
+{
+  "name": "Key UI",
+  "short_name": "Key UI",
+  "description": "A library of interactive UI with full source code and a guide for your AI agent",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
